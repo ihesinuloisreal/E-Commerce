@@ -37,7 +37,7 @@ const Product = () => {
                     There are many variation of Lorem Ipsum available, but 
                     the majority have suffered alteration in some form, by 
                     injected humour, or randomised words which don't look 
-                    even slightly believable.
+                    even slightly believable. 
                 </Desc>
                 <Price> $ 20</Price>
             </InfoContainer>
