@@ -6,21 +6,20 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-    height: 60px;
-
+  height: 60px;
 `
 
 const Wrapper = styled.div`
     padding: 10px 20px;
     display: flex;
-    align-item: center;
+    align-items: center;
     justify-content: space-between;
 `
 
 const Left = styled.div`
   flex:1;
   display: flex;
-  align-tem: center;
+  align-items: center;
   
 `
 const Languege = styled.span`
@@ -29,15 +28,15 @@ const Languege = styled.span`
 `
 
 const SearchContainer = styled.div`
-    ${'' /* border: 0.5px solid lightgray; */}
-    ${'' /* display: flex; */}
-    align-tem: center; 
-    margin-left: 25px
+    border: 0.5px solid lightgray;
+    display: flex;
+    align-items: center; 
+    margin-left: 25px;
     padding: 5px;
     
 `
 const Input = styled.input`
-    ${'' /* border: none; */}
+    border: none;
 `
 
 const Center = styled.div`
@@ -49,7 +48,7 @@ const Logo = styled.h1`
 `
 const Right = styled.div`
   flex:1;
-  align-item: center;
+  align-items: center;
   justify-content: flex-end;
   display: flex;
 `
