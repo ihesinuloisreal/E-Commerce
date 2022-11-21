@@ -126,7 +126,7 @@ const Footer = () => {
         <ContactItem>
            <MailOutline style= {{marginRight: "10px"}}/> ihesinuloisraelebuka@shop.dev
         </ContactItem>
-        {/* <Payment src=""/> */}
+        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png"/>
     </Right>
     </Container>
   )

@@ -29,7 +29,7 @@ const Product = () => {
         <Announcement/>
         <Wrapper>
             <ImgContainer>
-                <Image src={wear}/>
+                <Image src="https://i.ibb.co/S6qMxwr/jean.jpg"/>
             </ImgContainer>
             <InfoContainer>
                 <Title> Donim Jumsuite</Title>
