@@ -51,11 +51,16 @@ const List = styled.ul`
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    
 `
 
 const ListItem = styled.li`
     width: 50%;
     margin-bottom: 10px;
+    cursor: pointer;
+    /* &:hover {
+        color: "teal";
+    }; */
 `
 
 const Right = styled.div`
@@ -70,9 +75,9 @@ const ContactItem = styled.div`
     align-items: center;
 
 `
-// const Payment = styled.img`
-//     width: 100px;
-// `
+const Payment = styled.img`
+    width: 50%;
+`
 
 
 
