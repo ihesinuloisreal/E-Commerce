@@ -2,6 +2,7 @@ import Navbar from "../Component/Navbar"
 import Announcement from "../Component/Announcement"
 import Footer from "../Component/Footer"
 import styled from "styled-components"
+import { Add, Remove } from "@mui/icons-material"
 
 const Container = styled.div``
 
@@ -48,10 +49,78 @@ const  Buttom = styled.div`
 const Info = styled.div`
     flex: 3;
 `
+const Product = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+
+const ProductDetail = styled.div`
+    flex: 2;
+    display: flex;
+`
+
+const Image = styled.img`
+    width: 200px;
+`
+
+const Details = styled.div`
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+`
+
+const ProductName = styled.span``
+
+const ProductId = styled.span``
+
+const ProductColor = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: ${props => props.color};
+`
+
+const ProductSize = styled.span``
+
+const PriceDetail = styled.div`
+    flex: 1 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+
+const ProductAmountContainer = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+`
+const ProductAmount = styled.div`
+     font-size: 24px;
+     margin: 5px;
+`
+const ProductPrice = styled.div`
+    font-size: 30px;
+    font-weight: 200;
+
+`
+
+const Hr = styled.hr`
+    background-color: #eee;
+    border: none;
+    height: 1px;
+`
+
 const Summary = styled.div`
     flex: 1;
-    background-color: red ;
+    border: 0.5px solid lightgray;
 `
+const SummaryTitle = styled.h1``
+const SummaryItem = styled.div``
+const SummaryItemText = styled.span``
+const SummaryItemPrice = styled.span``
+const SummaryButton = styled.button``
 
 
 const Cart = () => {
@@ -70,8 +139,71 @@ const Cart = () => {
                     <TopButton type = "filled">CHECKOUT NOW</TopButton>
                 </Top>
                 <Buttom>
-                    <Info></Info>
-                    <Summary></Summary>
+                    <Info>
+                        <Product>
+                            <ProductDetail>
+                                <Image src= "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+                                <Details>
+                                    <ProductName><b>PRODUCT:</b> JESSIE THUNDER SHOES</ProductName>
+                                    <ProductId><b>ID:</b> 346735885486</ProductId>
+                                    <ProductColor color="blue"/>
+                                    <ProductSize><b>SIZE:</b> 37.5</ProductSize>
+
+                                </Details>
+                                
+                            </ProductDetail>
+                            <PriceDetail>
+                                <ProductAmountContainer>
+                                    <Add/>
+                                    <ProductAmount>2</ProductAmount>
+                                    <Remove/>
+                                </ProductAmountContainer>
+                                <ProductPrice>$ 30</ProductPrice>
+                            </PriceDetail>
+                        </Product>
+                        <Hr/>
+                        <Product>
+                            <ProductDetail>
+                                <Image src= "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+                                <Details>
+                                    <ProductName><b>PRODUCT:</b> JESSIE THUNDER SHOES</ProductName>
+                                    <ProductId><b>ID:</b> 346735885486</ProductId>
+                                    <ProductColor color="blue"/>
+                                    <ProductSize><b>SIZE:</b> 37.5</ProductSize>
+
+                                </Details>
+                                
+                            </ProductDetail>
+                            <PriceDetail>
+                                <ProductAmountContainer>
+                                    <Add/>
+                                    <ProductAmount>2</ProductAmount>
+                                    <Remove/>
+                                </ProductAmountContainer>
+                                <ProductPrice>$ 30</ProductPrice>
+                            </PriceDetail>
+                        </Product>
+                    </Info>
+                    <Summary>
+                        <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+                        <SummaryItem>
+                            <SummaryItemText>Subtotal</SummaryItemText>
+                            <SummaryItemPrice>$ 60</SummaryItemPrice>
+                        </SummaryItem>
+                        <SummaryItem>
+                            <SummaryItemText>Estimated Shipping</SummaryItemText>
+                            <SummaryItemPrice>$ 3.94</SummaryItemPrice>
+                        </SummaryItem>
+                        <SummaryItem>
+                            <SummaryItemText>Shipping Discount</SummaryItemText>
+                            <SummaryItemPrice>$ -3.94</SummaryItemPrice>
+                        </SummaryItem>
+                        <SummaryItem>
+                            <SummaryItemText type="total">Total</SummaryItemText>
+                            <SummaryItemPrice>$ 63.94</SummaryItemPrice>
+                        </SummaryItem>
+                        <SummaryButton>CHECKOUT NOW</SummaryButton>
+                    </Summary>
                 </Buttom>
             </Wrapper>
         <Footer/>
