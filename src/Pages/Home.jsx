@@ -1,5 +1,5 @@
 import React from 'react'
-import Categories from '../Categories'
+import Categories from '../Component/Categories'
 import Announcement from '../Component/Announcement'
 import Footer from '../Component/Footer'
 
