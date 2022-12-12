@@ -31,16 +31,19 @@ export const Category = [
         id: 1,
         img: require("./img/Mercy-Johnson.jpg"),
         title: "SHIRT Style",
+        cat: "women"
     },
     {
         id: 2,
         img: require("./img/Mercy-Johnson.jpg"),
         title: "LOUNGE WEAR LOVE",
+        cat: "coat"
     },
     {
         id: 3,
         img: require("./img/Mercy-Johnson.jpg"),
         title: "LIGHT JACKETS",
+        cat: "jeans"
     }
 ];
 
