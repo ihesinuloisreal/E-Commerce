@@ -10,7 +10,7 @@ import Success from "./Pages/Success";
 // import {createBrowserRouter, RouterProvider, Route} from "react-router-dom";
 
 function App() {
-  const user = true;
+  // const user = true;
   return (
     // <div>
     
