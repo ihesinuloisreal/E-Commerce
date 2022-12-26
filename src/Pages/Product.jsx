@@ -6,6 +6,9 @@ import wear from "../img/Mercy-Johnson.jpg"
 import styled from "styled-components"
 import { Add, Remove } from "@mui/icons-material"
 import { mobile } from "../Responsive"
+import {useLocation} from "react-router-dom";
+import { useEffect, useState } from "react"
+import { publicRequest } from '../requestMethod';
 
 const Container = styled.div``
 
@@ -123,38 +126,49 @@ const Button = styled.button`
 
 
 const Product = () => {
+    const location = useLocation();
+    const id = location.pathname.split("/")[2];
+    const [product, setProduct] = useState({});
+
+    useEffect(() => {
+      const getProduct = async ()=>{
+        try {
+            const res = await publicRequest.get("/products/find/"+id);
+            setProduct(res.data);
+        } catch (err) {}
+      };
+      getProduct();
+      
+      console.log(product.img);
+    }, [id]);
+    
   return (
     <Container>
         <Navbar/>
         <Announcement/>
-        <Wrapper>
+        {/* <Wrapper>
             <ImgContainer>
-                <Image src="https://i.ibb.co/S6qMxwr/jean.jpg"/>
+                <Image src={product.img}/>
             </ImgContainer>
             <InfoContainer>
-                <Title> Donim Jumsuite</Title>
+                <Title> {product.title}</Title>
                 <Desc> 
-                    There are many variation of Lorem Ipsum available, but 
-                    the majority have suffered alteration in some form, by 
-                    injected humour, or randomised words which don't look 
-                    even slightly believable. 
+                {product.desc} 
                 </Desc>
-                <Price> $ 20</Price>
+                <Price> $ {product.price}</Price>
                 <FilterContainer>
                     <Filter>
                         <FilterTitle>Color</FilterTitle>
-                        <FilterColor Color="black"/>
-                        <FilterColor Color="darkblue"/>
-                        <FilterColor Color="gray"/>
+                        {product.color.map((c) => (
+                        <FilterColor Color={c} key={c}/>
+                        ))};
                     </Filter>
                     <Filter>
                         <FilterTitle>size</FilterTitle>
                         <FilterSize>
-                            <FilterSizeOption>XS</FilterSizeOption>
-                            <FilterSizeOption>S</FilterSizeOption>
-                            <FilterSizeOption>M</FilterSizeOption>
-                            <FilterSizeOption>L</FilterSizeOption>
-                            <FilterSizeOption>XL</FilterSizeOption>
+                        {product.size.map((s) => (
+                            <FilterSizeOption key={s}>{s}</FilterSizeOption>
+                        ))};
                         </FilterSize>
                     </Filter>
                 </FilterContainer>
@@ -167,7 +181,7 @@ const Product = () => {
                     <Button>ADD TO CART</Button>
                 </AddContainer>
             </InfoContainer>
-        </Wrapper>
+        </Wrapper> */}
         <Newsletter/>
         <Footer/>
     </Container>
