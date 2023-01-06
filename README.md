@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### `Error and fix`
+
+Funny how i spent almost an hour trying to figure out where i must have gone wrong in this code 
+### "export const { addProduct } = cartSlice.action;"
+meanwhile i was missing just and s, and it was giving me this error message 
+# `Uncaught TypeError: Cannot destructure property 'addProduct' of 'cartSlice.action' as it is undefined.`
+So i fixed the error by adding the s
+### "export const { addProduct } = cartSlice.actions;"

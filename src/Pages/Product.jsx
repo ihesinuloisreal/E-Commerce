@@ -73,7 +73,7 @@ const FilterColor = styled.div`
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: ${props => props.Color};
+    background-color: ${props => props.color};
     margin: 0px 5px;
     cursor: pointer;
 `
@@ -138,7 +138,7 @@ const Product = () => {
         try {
             const res = await publicRequest.get("/products/find/"+id);
             setProduct(res.data);
-            console.log(product.title);
+            // console.log(product.title);
         } catch (err) {
             console.log (err)
         }
@@ -173,8 +173,8 @@ const Product = () => {
                     <Filter>
                         <FilterTitle>Color</FilterTitle>
                         {product.color?.map((c) => (
-                        <FilterColor Color={c} key={c} onClick={() => setColor(c)}/>
-                        ))};
+                            <FilterColor color={c} key={c} onClick={(c)=> setColor(c)}/>
+                        ))}
                     </Filter>
                     <Filter>
                         <FilterTitle>size</FilterTitle>

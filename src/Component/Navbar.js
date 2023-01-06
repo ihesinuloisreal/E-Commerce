@@ -5,6 +5,8 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import React from 'react'
 import styled from 'styled-components'
 import { mobile } from "../Responsive"
+import { useSelector } from "react-redux"
+
 
 const Container = styled.div`
   height: 60px;
@@ -68,6 +70,8 @@ const MenuItem = styled.div`
 
 `
 const Navbar = () => {
+  const cart = useSelector( state=> state.cart);
+  console.log(cart);
   return (
     <Container>
         <Wrapper>
