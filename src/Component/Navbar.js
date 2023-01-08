@@ -70,8 +70,10 @@ const MenuItem = styled.div`
 
 `
 const Navbar = () => {
-  const cart = useSelector( state=> state.cart);
-  console.log(cart);
+  const quantity = useSelector( state=> state.cart.quantity);
+  // const product = useSelector( state=> state.cart.product);
+  // const product = useSelector( state=> state.cart.product);
+  // console.log(quantity);
   return (
     <Container>
         <Wrapper>
@@ -90,7 +92,7 @@ const Navbar = () => {
             <MenuItem>REGISTER</MenuItem>
             <MenuItem>SIGN IN</MenuItem>
             <MenuItem>
-              <Badge badgeContent={4} color="primary">
+              <Badge badgeContent={ quantity } color="primary">
                 <ShoppingCartOutlinedIcon color="action" />
               </Badge>
             </MenuItem>
